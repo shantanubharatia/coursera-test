@@ -1,0 +1,12 @@
+<!-- Hello {{items}} -->
+
+<br><br><br>
+<h3 ng-if="items.length>0" class="clearfix"> Found Items are </h3>
+
+<ul class="clearfix">
+    
+    <li ng-repeat="item in items">
+        {{item.short_name}}, {{item.name}}, {{item.description}}
+        <button ng-click="onRemove({index: $index})">Don't want this one</button>
+    </li>
+</ul>
